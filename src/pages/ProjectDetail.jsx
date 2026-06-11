@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default function ProjectDetail({ projectSlug, onBack }) {
+export default function ProjectDetail({ lang, projectSlug, onBack }) {
   const displayNames = {
-    repot: 'REPOT. Plant community app.',
-    blueroom: 'BLUE ROOM INNOVATION. Internship.',
-    hackupc: 'HACKUPC 2025. Split The Bill.',
-    pluma: 'PLUMA. Daily writing lessons app.'
+    repot: lang === 'en' ? 'REPOT. Plant community app.' : 'REPOT. App de comunidad de plantas.',
+    blueroom: lang === 'en' ? 'BLUE ROOM INNOVATION. Internship.' : 'BLUE ROOM INNOVATION. Prácticas.',
+    hackupc: lang === 'en' ? 'HACKUPC 2025. Split The Bill.' : 'HACKUPC 2025. Divide la cuenta.',
+    pluma: lang === 'en' ? 'PLUMA. Daily writing lessons app.' : 'PLUMA. App de lecciones de escritura.'
   };
 
   const name = displayNames[projectSlug] || 'Project Details';
@@ -17,7 +17,7 @@ export default function ProjectDetail({ projectSlug, onBack }) {
         className="nav-item active"
         style={{ width: 'fit-content' }}
       >
-        &larr; Back to work.
+        {lang === 'en' ? '← Back to work.' : '← Volver a proyectos.'}
       </button>
       
       <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '12px' }}>
@@ -36,7 +36,9 @@ export default function ProjectDetail({ projectSlug, onBack }) {
           textTransform: 'lowercase',
           letterSpacing: 'var(--letter-spacing)'
         }}>
-          details page under construction. check back soon!
+          {lang === 'en' 
+            ? 'details page under construction. check back soon!' 
+            : 'página de detalles en construcción. ¡vuelve pronto!'}
         </div>
       </div>
     </div>

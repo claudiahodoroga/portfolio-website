@@ -834,6 +834,45 @@ ul, ol {
   }
 }
 
+/* Language Toggle Styles */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  color: #000000;
+  padding: 0;
+  transition: color 0.2s ease;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.lang-btn.active {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.lang-divider {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+}
+
+@media (max-width: 1024px) {
+  .lang-toggle {
+    margin-top: 12px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+
 
 
 

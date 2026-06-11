@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function SpotifyWidget() {
+export default function SpotifyWidget({ lang }) {
   const [trackInfo, setTrackInfo] = useState({
     isPlaying: false,
     title: "Immersion, Interaction & Engagement",
@@ -15,7 +15,6 @@ export default function SpotifyWidget() {
         const res = await fetch('/api/spotify');
         if (res.ok) {
           const data = await res.json();
-          // Map API keys to state
           setTrackInfo({
             isPlaying: data.isPlaying,
             title: data.title || "Immersion, Interaction & Engagement",
@@ -30,10 +29,16 @@ export default function SpotifyWidget() {
     };
 
     fetchSpotifyData();
-    // Poll the serverless API every 15 seconds
     const interval = setInterval(fetchSpotifyData, 15000);
     return () => clearInterval(interval);
   }, []);
+
+  const statusText = trackInfo.isPlaying
+    ? (lang === 'en' ? "Currently Listening" : "Escuchando ahora")
+    : (lang === 'en' ? "Recently Played" : "Escuchado recientemente");
+
+  const visitTitle = lang === 'en' ? "Visit Spotify" : "Visitar Spotify";
+  const listenTitle = lang === 'en' ? `Listening: ${trackInfo.title}` : `Escuchando: ${trackInfo.title}`;
 
   return (
     <a 
@@ -41,7 +46,7 @@ export default function SpotifyWidget() {
       target="_blank" 
       rel="noopener noreferrer" 
       className="spotify-widget-container"
-      title={trackInfo.isPlaying ? `Listening: ${trackInfo.title}` : "Visit Spotify"}
+      title={trackInfo.isPlaying ? listenTitle : visitTitle}
     >
       <div 
         className="spotify-cd"
@@ -61,7 +66,7 @@ export default function SpotifyWidget() {
       
       <div className="spotify-info">
         <span className="spotify-status">
-          {trackInfo.isPlaying ? "Currently Listening" : "Recently Played"}
+          {statusText}
         </span>
         <span className="spotify-title" title={trackInfo.title}>
           {trackInfo.title}

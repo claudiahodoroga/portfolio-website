@@ -1,50 +1,67 @@
 import React from 'react';
 import FishTank from './FishTank';
 
-export default function Navbar({ currentPage, setCurrentPage }) {
+export default function Navbar({ lang, setLang, currentPage, setCurrentPage }) {
   return (
     <div className="sidebar">
       <div className="nav-container">
         <FishTank />
         <div className="nav-name">Claudia Hodoroga</div>
-
+        
+        {/* Language Switcher */}
+        <div className="lang-toggle">
+          <button 
+            onClick={() => setLang('en')} 
+            className={`lang-btn ${lang === 'en' ? 'active' : ''}`}
+          >
+            EN
+          </button>
+          <span className="lang-divider">/</span>
+          <button 
+            onClick={() => setLang('es')} 
+            className={`lang-btn ${lang === 'es' ? 'active' : ''}`}
+          >
+            ES
+          </button>
+        </div>
+        
         <nav className="nav-menu">
-          <button
+          <button 
             onClick={() => setCurrentPage('work')}
             className={`nav-item ${currentPage === 'work' ? 'active' : ''}`}
           >
-            work.
+            {lang === 'en' ? 'work.' : 'proyectos.'}
           </button>
-
-          <button
+          
+          <button 
             onClick={() => setCurrentPage('about')}
             className={`nav-item ${currentPage === 'about' ? 'active' : ''}`}
           >
-            about.
+            {lang === 'en' ? 'about.' : 'sobre mí.'}
           </button>
-
-          <button
+          
+          <button 
             onClick={() => setCurrentPage('archive')}
             className={`nav-item ${currentPage === 'archive' ? 'active' : ''}`}
           >
-            archive.
+            {lang === 'en' ? 'archive.' : 'archivo.'}
           </button>
-
-          <a
-            href="/cv.pdf"
-            target="_blank"
+          
+          <a 
+            href="/cv.pdf" 
+            target="_blank" 
             rel="noopener noreferrer"
             className="nav-item"
           >
             CV.
           </a>
         </nav>
-
+        
         <div className="nav-socials">
-          <a href="https://www.linkedin.com/in/claudiahodoroga/" target="_blank" rel="noopener noreferrer">
+          <a href="https://linkedin.com/in/claudia-hodoroga" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
-          <a href="mailto:claudiahodoroga@outlook.com" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:claudia.hodoroga@email.com" target="_blank" rel="noopener noreferrer">
             Email
           </a>
         </div>

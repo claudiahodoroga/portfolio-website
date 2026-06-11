@@ -1,12 +1,11 @@
 import React, { useRef } from 'react';
 
-export default function ProjectCard({ project, onClick }) {
+export default function ProjectCard({ project, lang, onClick }) {
   const videoRef = useRef(null);
 
   const handleMouseEnter = () => {
     if (videoRef.current) {
       videoRef.current.play().catch(err => {
-        // Silently catch play exceptions if the browser blocks play action before user interaction
         console.warn("Autoplay blocked or video missing:", err);
       });
     }
@@ -49,7 +48,7 @@ export default function ProjectCard({ project, onClick }) {
           />
         )}
         <div className="hover-overlay">
-          view full demo and case study
+          {lang === 'en' ? 'view full demo and case study' : 'ver demo y caso de estudio'}
         </div>
       </div>
     </div>

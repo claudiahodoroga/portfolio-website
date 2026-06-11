@@ -8,6 +8,7 @@ import ProjectDetail from './pages/ProjectDetail';
 export default function App() {
   const [currentPage, setCurrentPage] = useState('work');
   const [selectedProject, setSelectedProject] = useState(null);
+  const [lang, setLang] = useState('en');
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -31,21 +32,21 @@ export default function App() {
   const renderPageContent = () => {
     switch (currentPage) {
       case 'work':
-        return <Work onProjectSelect={handleProjectSelect} />;
+        return <Work lang={lang} onProjectSelect={handleProjectSelect} />;
       case 'about':
-        return <About />;
+        return <About lang={lang} />;
       case 'archive':
-        return <Archive />;
+        return <Archive lang={lang} />;
       case 'detail':
-        return <ProjectDetail projectSlug={selectedProject} onBack={handleBackToWork} />;
+        return <ProjectDetail lang={lang} projectSlug={selectedProject} onBack={handleBackToWork} />;
       default:
-        return <Work onProjectSelect={handleProjectSelect} />;
+        return <Work lang={lang} onProjectSelect={handleProjectSelect} />;
     }
   };
 
   return (
     <div className="layout-container">
-      <Navbar currentPage={currentPage} setCurrentPage={handlePageChange} />
+      <Navbar lang={lang} setLang={setLang} currentPage={currentPage} setCurrentPage={handlePageChange} />
       <main className="main-content">
         {renderPageContent()}
       </main>
