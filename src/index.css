@@ -571,10 +571,17 @@ ul, ol {
   text-decoration: underline;
 }
 
-.nav-socials {
+.nav-footer {
   margin-top: auto;
   display: flex;
-  gap: 16px;
+  flex-direction: column;
+}
+
+.nav-socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
 }
 
 .nav-socials a {
@@ -582,6 +589,7 @@ ul, ol {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 /* Mobile Navbar Layout overrides */
@@ -609,21 +617,26 @@ ul, ol {
     font-size: 12px;
   }
 
-  .nav-socials {
+  .nav-footer {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    margin-top: 0;
     background: #ffffff;
     border-top: none;
     border-radius: 0;
     padding: 16px;
+    display: flex;
     justify-content: center;
-    gap: 48px;
-    box-shadow: none;
+    align-items: center;
     z-index: 1000;
     width: 100vw;
+  }
+
+  .nav-socials {
+    margin-top: 0;
+    gap: 6px;
+    justify-content: center;
   }
 }
 
@@ -839,7 +852,6 @@ ul, ol {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-top: 16px;
 }
 
 .lang-btn {
@@ -856,7 +868,11 @@ ul, ol {
 
 .lang-btn.active {
   color: var(--primary-color);
-  font-weight: 700;
+  text-decoration: underline;
+}
+
+.lang-btn:hover {
+  opacity: 0.8;
 }
 
 .lang-divider {
@@ -866,9 +882,8 @@ ul, ol {
 
 @media (max-width: 1024px) {
   .lang-toggle {
-    margin-top: 12px;
-    justify-content: center;
-    width: 100%;
+    margin-top: 0;
+    width: auto;
   }
 }
 

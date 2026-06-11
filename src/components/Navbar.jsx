@@ -8,23 +8,6 @@ export default function Navbar({ lang, setLang, currentPage, setCurrentPage }) {
         <FishTank />
         <div className="nav-name">Claudia Hodoroga</div>
         
-        {/* Language Switcher */}
-        <div className="lang-toggle">
-          <button 
-            onClick={() => setLang('en')} 
-            className={`lang-btn ${lang === 'en' ? 'active' : ''}`}
-          >
-            EN
-          </button>
-          <span className="lang-divider">/</span>
-          <button 
-            onClick={() => setLang('es')} 
-            className={`lang-btn ${lang === 'es' ? 'active' : ''}`}
-          >
-            ES
-          </button>
-        </div>
-        
         <nav className="nav-menu">
           <button 
             onClick={() => setCurrentPage('work')}
@@ -57,13 +40,30 @@ export default function Navbar({ lang, setLang, currentPage, setCurrentPage }) {
           </a>
         </nav>
         
-        <div className="nav-socials">
-          <a href="https://linkedin.com/in/claudia-hodoroga" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </a>
-          <a href="mailto:claudia.hodoroga@email.com" target="_blank" rel="noopener noreferrer">
-            Email
-          </a>
+        <div className="nav-footer">
+          <div className="nav-socials">
+            <a href="https://www.linkedin.com/in/claudiahodoroga/" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+            <span className="lang-divider">/</span>
+            <a href="mailto:claudiahodoroga@outlook.com" target="_blank" rel="noopener noreferrer">
+              Email
+            </a>
+            <span className="lang-divider">/</span>
+            <button 
+              onClick={() => setLang('en')} 
+              className={`lang-btn ${lang === 'en' ? 'active' : ''}`}
+            >
+              english
+            </button>
+            <span className="lang-divider">/</span>
+            <button 
+              onClick={() => setLang('es')} 
+              className={`lang-btn ${lang === 'es' ? 'active' : ''}`}
+            >
+              español
+            </button>
+          </div>
         </div>
       </div>
     </div>

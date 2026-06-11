@@ -27,16 +27,14 @@ export default function Archive({ lang }) {
           ) : (
             <>
               <p>
-                Unirme al equipo de GDG Girona ha sido una experiencia clave en los últimos años. Lo que empezó como una iniciativa para ayudar a un amigo se ha convertido en un gran equipo y una comunidad muy activa.
+                Unirme al equipo de GDG Girona ha sido una experiencia clave en los últimos años. Lo que empezó como una iniciativa para ayudar a una amiga se ha convertido en un gran equipo y una comunidad muy activa.
               </p>
               <p>
-                Al organizar eventos tecnológicos he aprendido habilidades como el networking, la gestión de logística y el trabajo con presupuestos. Las 'habilidades blandas' deberían renombrarse como 'habilidades invaluables'. No hay nada que te enseñe a reaccionar tan rápido como el retraso del tren de un ponente o un problema de comunicación con el proveedor de catering.
+                Al organizar eventos tecnológicos he aprendido habilidades como el networking, la gestión de logística y el trabajo con presupuestos. Las 'habilidades blandas' deberían renombrarse como 'habilidades invaluables'. No hay nada que te enseñe a reaccionar rápido como que se le atrase el tren a un ponente, o que hayan problemas con el proveedor de cátering.
+                Aunque ahora estoy un poco lejos, sigo apoyando al equipo que ayudé a construir junto a mi coorganizadora y bestie Lila.
               </p>
               <p>
-                Aunque ahora estoy un poco lejos, sigo apoyando al equipo que ayudé a construir junto a mi coorganizadora y mejor amiga Lila.
-              </p>
-              <p>
-                Puedes encontrarnos en <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> o <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+                Puedes encontrarnos en <a href="https://www.instagram.com/gdg_udg/" target="_blank" rel="noopener noreferrer">Instagram</a> o <a href="https://l.instagram.com/?u=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fgdg-on-campus-universitat-de-girona%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnfkHKlmKAWDonzC0s0Vc71t6dCVgRw1b4BwpE38VkK1dsZbHhiYhy7xmiQkI_aem_jf2jeJmzI6CBl0ppvDWCyA&e=AUC7pnnfwpFhYI2LgtMS1-bRpwQPeAU33PdBMIgKxjEr1Xmf7PJsrqy9lmoc6LV_yREyOY21PyTfiFeBvJQQWQTf4uPyyhsdiAexHdqUpMfm-mL9OF-p5EpTJ8QFIy-4R2i8Nfg" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
               </p>
             </>
           )}
@@ -55,7 +53,7 @@ export default function Archive({ lang }) {
           {lang === 'en' ? (
             <>
               <p>
-                Studying game design sometimes means, shockingly, actually making [games]. The sarcasm comes from endless hours trying to figure out how a NAT network works and debugging thousands of C++ program lines. :)
+                Studying game design sometimes means, shockingly, actually making [games]. The sarcasm comes from endless hours trying to figure out how a NAT network works and debugging thousands of C++ program lines.
               </p>
               <p>
                 The project I loved the most was 'Guardian of the Breadth'. It's buggy and incomplete, but what came from those three months of work feels like the first real game I've made.
@@ -70,16 +68,16 @@ export default function Archive({ lang }) {
           ) : (
             <>
               <p>
-                Estudiar diseño de videojuegos a veces significa, sorprendentemente, hacer videojuegos. El sarcasmo proviene de las interminables horas intentando entender cómo funciona una red NAT y depurando miles de líneas de código en C++. :)
+                Estudiar diseño de videojuegos a veces significa, sorprendentemente, hacer videojuegos. El sarcasmo proviene de las interminables horas intentando entender cómo funciona una red NAT y depurando miles de líneas de código en C++.
               </p>
               <p>
-                El proyecto que más amé fue 'Guardian of the Breadth'. Está incompleto y tiene fallos, pero lo que surgió de esos tres meses de trabajo se siente como el primer juego real que he hecho.
+                El proyecto que más me gustó fue 'Guardian of the Breadth'. Está incompleto y tiene fallos, pero lo que surgió de esos tres meses de trabajo se siente como el primer juego real que he hecho.
               </p>
               <p>
                 Pude investigar y poner en práctica metodologías SCRUM liderando a mi equipo, actuando como directora de arte y gestora de equipo. También aprendí lo que es un 'artista técnico' y descubrí mi pasión por crear shaders que apenas funcionan.
               </p>
               <p>
-                En este proyecto, aporté lo que amo: hacer un poco de todo. Programó algunas mecánicas de juego, diseñó algunos elementos 3D, integré el diseño de sonido y creé algunos shaders que le dan al juego su estilo visual único.
+                En este proyecto, aporté lo que amo: hacer un poco de todo. Programé algunas mecánicas de juego, diseñé algunos elementos 3D, integré el diseño de sonido y creé algunos shaders que le dan al juego su estilo visual único.
               </p>
             </>
           )}

@@ -9,42 +9,42 @@ export default function About({ lang }) {
       <div className="about-row-1">
         <div className="about-col-text">
           <Greeting />
-          
+
           {lang === 'en' ? (
             <>
               <p>
-                I've always been the new kid. I was born in Madrid to a Romanian family. In my current chapter, <a href="https://www.google.com/maps/place/Dublin" target="_blank" rel="noopener noreferrer" className="blue-text">I'm figuring out life in Dublin</a>. Moving a lot has taught me to read a room fast and value building something worth staying for.
+                I've always been the new kid. I was born in Madrid to a Romanian family, moved to Logroño as a teen, and spent my uni years in Girona. In my current chapter, <span className="blue-text">I'm figuring out life in Dublin</span>. Moving a lot has taught me to read a room fast and value building something worth staying for.
               </p>
               <p>
-                I grew up on the internet. Club Penguin, YouTube, Tumblr; that's where I developed my creative eye. <span className="blue-text">2000s nostalgia</span> drives a lot of my design choices.
+                You could say I was raised on the internet. Club Penguin, YouTube, Tumblr; that's where I developed my creative eye. <span className="blue-text">2000s nostalgia</span> drives a lot of my design choices.
               </p>
               <p>
                 I studied in Videogame Design and Development. I spent four years thinking about <span className="blue-text">immersion, interaction, engagement</span>, and having fun. I care about the small details nobody notices until they're missing.
               </p>
               <p>
-                If this sounds like someone worth grabbing a coffee with, my <a href="mailto:claudia.hodoroga@email.com" className="blue-text">email</a> / <a href="https://linkedin.com/in/claudia-hodoroga" target="_blank" rel="noopener noreferrer" className="blue-text">LinkedIn</a> are right there!
+                If this sounds like someone worth grabbing a coffee with, my <a href="mailto:claudiahodoroga@outlook.com" className="blue-text">email</a> / <a href="https://www.linkedin.com/in/claudiahodoroga/" target="_blank" rel="noopener noreferrer" className="blue-text">LinkedIn</a> are right there!
               </p>
             </>
           ) : (
             <>
               <p>
-                Siempre he sido la nueva. Nací en Madrid en una familia rumana. En mi capítulo actual, <a href="https://www.google.com/maps/place/Dublin" target="_blank" rel="noopener noreferrer" className="blue-text">estoy descubriendo la vida en Dublín</a>. Mudarme mucho me ha enseñado a leer rápido el ambiente y a valorar la construcción de algo por lo que valga la pena quedarse.
+                Siempre he sido la niña nueva. Nací en Madrid en una familia rumana, me mudé a Logroño de adolescente y pasé mis años de la uni en Girona. En mi capítulo actual, <span className="blue-text">estoy descubriendo la vida en Dublín</span>. Mudarme mucho me ha enseñado a adaptarme a diferentes ambientes y a valorar crear cosas por las que valga la pena quedarse.
               </p>
               <p>
-                Crecí en el internet. Club Penguin, YouTube, Tumblr; ahí es donde desarrollé mi ojo creativo. La <span className="blue-text">nostalgia de los años 2000</span> impulsa muchas de mis decisiones de diseño.
+                Se podría decir que me crié en internet. Club Penguin, YouTube, Tumblr; ahí es donde desarrollé mi ojo creativo. La <span className="blue-text">nostalgia de los años 2000</span> impulsa muchas de mis decisiones de diseño.
               </p>
               <p>
-                Estudié Diseño y Desarrollo de Videojuegos. Pasé cuatro años pensando en la <span className="blue-text">inmersión, la interacción, el compromiso</span> y en divertirme. Me importan los pequeños detalles en los que nadie se fija hasta que faltan.
+                Estudié Diseño y Desarrollo de Videojuegos. Pasé cuatro años pensando en la <span className="blue-text">inmersión, la interacción, cómo captar la atención,</span> y en pasarlo bien. Me importan los pequeños detalles en los que nadie se fija hasta que faltan.
               </p>
               <p>
-                Si esto te suena a alguien con quien valdría la pena tomar un café, ¡mi <a href="mailto:claudia.hodoroga@email.com" className="blue-text">correo electrónico</a> / <a href="https://linkedin.com/in/claudia-hodoroga" target="_blank" rel="noopener noreferrer" className="blue-text">LinkedIn</a> están justo ahí!
+                Si esto te suena a alguien con quien valdría la pena tomar un café, ¡mi <a href="mailto:claudiahodoroga@outlook.com" className="blue-text">email</a> / <a href="https://www.linkedin.com/in/claudiahodoroga/" target="_blank" rel="noopener noreferrer" className="blue-text">LinkedIn</a> están ahí!
               </p>
             </>
           )}
 
           <SpotifyWidget lang={lang} />
         </div>
-        
+
         <div className="about-col-img">
           <img src="/photos/aboutme.jpg" alt="Claudia Hodoroga" className="about-img" />
         </div>
@@ -67,7 +67,7 @@ export default function About({ lang }) {
                 {lang === 'en' ? 'September 2024 - Present' : 'Septiembre 2024 - Presente'}
               </span>
             </div>
-            
+
             <div className="info-item">
               <span className="info-item-title">
                 {lang === 'en' ? 'Quality Assurance Auditor' : 'Auditora de Control de Calidad'}
@@ -77,7 +77,7 @@ export default function About({ lang }) {
                 {lang === 'en' ? 'March 2026 - Present' : 'Marzo 2026 - Presente'}
               </span>
             </div>
-            
+
             <div className="info-item">
               <span className="info-item-title">
                 {lang === 'en' ? 'Quality Assurance Evaluator' : 'Evaluadora de Control de Calidad'}
@@ -87,7 +87,7 @@ export default function About({ lang }) {
                 {lang === 'en' ? 'October 2025 - April 2026' : 'Octubre 2025 - Abril 2026'}
               </span>
             </div>
-            
+
             <div className="info-item">
               <span className="info-item-title">
                 {lang === 'en' ? 'Frontend & UX/UI Intern' : 'Becaria Frontend y UX/UI'}
@@ -129,7 +129,7 @@ export default function About({ lang }) {
                 {lang === 'en' ? 'Frontend development' : 'Desarrollo frontend'}
               </span>
             </div>
-            
+
             <div className="skills-group" style={{ marginTop: '4px' }}>
               <span className="info-item-subtitle">Figma</span>
               <span className="info-item-subtitle">Android Studio</span>
@@ -155,7 +155,7 @@ export default function About({ lang }) {
               <span className="info-item-subtitle">Universitat de Girona</span>
               <span className="info-item-date">2022 - 2026</span>
             </div>
-            
+
             <div className="info-item">
               <span className="info-item-title">
                 {lang === 'en' ? 'Foundations of UX Design - Google' : 'Fundamentos del Diseño de Experiencia de Usuario (UX) - Google'}
