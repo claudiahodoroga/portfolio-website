@@ -823,6 +823,18 @@ ul, ol {
   }
 }
 
+@media (max-width: 1024px) {
+  .project-tags {
+    gap: 4px;
+  }
+
+  .project-tag {
+    font-size: 10px;
+    padding: 3px 2px;
+  }
+}
+
+
 
 
 
