@@ -29,15 +29,6 @@ export default function Work({ lang, onProjectSelect }) {
         : ['integración de IA', 'entrega en 36h', 'optimización de ux'],
       thumbnail: '/photos/hackup.png',
       video: '/videos/hackupc.mp4'
-    },
-    {
-      slug: 'pluma',
-      title: lang === 'en' ? 'PLUMA. Daily writing lessons app.' : 'PLUMA. App de lecciones de escritura.',
-      tags: lang === 'en' 
-        ? ['prototyping', 'ux research', 'interaction design'] 
-        : ['prototipado', 'investigación ux', 'diseño de interacción'],
-      thumbnail: '/photos/pluma.png',
-      video: '/videos/pluma.mp4'
     }
   ];
 

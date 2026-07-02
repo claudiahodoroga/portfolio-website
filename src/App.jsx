@@ -4,6 +4,8 @@ import Work from './pages/Work';
 import About from './pages/About';
 import Archive from './pages/Archive';
 import ProjectDetail from './pages/ProjectDetail';
+import CustomCursor from './components/CustomCursor';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('work');
@@ -46,8 +48,10 @@ export default function App() {
 
   return (
     <div className="layout-container">
+      <CustomCursor />
+      <ScrollToTop />
       <Navbar lang={lang} setLang={setLang} currentPage={currentPage} setCurrentPage={handlePageChange} />
-      <main className="main-content">
+      <main className="main-content fade-in-page" key={currentPage}>
         {renderPageContent()}
       </main>
     </div>

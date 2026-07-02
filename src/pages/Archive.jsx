@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageGallery from '../components/ImageGallery';
 
 export default function Archive({ lang }) {
   return (
@@ -40,7 +41,11 @@ export default function Archive({ lang }) {
           )}
         </div>
         <div className="archive-col-right">
-          <img src="/photos/gdg.jpg" alt="Google Developers Group" className="archive-img" />
+          <ImageGallery
+            images={[
+              { src: '/photos/gdg.jpg', alt: 'Google Developers Group Girona' },
+            ]}
+          />
         </div>
       </div>
 
@@ -83,7 +88,11 @@ export default function Archive({ lang }) {
           )}
         </div>
         <div className="archive-col-right">
-          <img src="/photos/gamedev.png" alt="Videogame Design and Development" className="archive-img" />
+          <ImageGallery
+            images={[
+              { src: '/photos/gamedev.png', alt: 'Guardian of the Breadth — game screenshot' },
+            ]}
+          />
         </div>
       </div>
 
@@ -114,7 +123,11 @@ export default function Archive({ lang }) {
           )}
         </div>
         <div className="archive-col-right">
-          <img src="/photos/art.png" alt="Illustration and Graphic Design" className="archive-img" />
+          <ImageGallery
+            images={[
+              { src: '/photos/art.png', alt: 'Artwork examples' },
+            ]}
+          />
         </div>
       </div>
 
@@ -132,14 +145,14 @@ export default function Archive({ lang }) {
         </div>
         <div className="archive-col-right">
           <div className="archive-links">
-            <a href="#story-1" className="info-item-subtitle">
-              {lang === 'en' ? 'Link to story 1.' : 'Enlace a la historia 1.'}
+            <a href="https://galateas.substack.com/p/be-my-guest" target="_blank" rel="noopener noreferrer" className="info-item-subtitle">
+              Be my guest!
             </a>
-            <a href="#story-2" className="info-item-subtitle">
-              {lang === 'en' ? 'Link to story 2.' : 'Enlace a la historia 2.'}
+            <a href="https://docs.google.com/document/d/10bA4AifyiaeAuAHGaad8OYa7dODVN7jKWtryxRuZelM/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="info-item-subtitle">
+              A Time-sick City.
             </a>
-            <a href="#story-3" className="info-item-subtitle">
-              {lang === 'en' ? 'Link to story 3.' : 'Enlace a la historia 3.'}
+            <a href="https://docs.google.com/document/d/1FvDypdhyKlFDzMl3J1b-9M2qGN_K5pu_kgOk4rXgYss/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="info-item-subtitle">
+              The Willow Witch.
             </a>
           </div>
         </div>
