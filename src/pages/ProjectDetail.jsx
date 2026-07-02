@@ -387,18 +387,7 @@ export default function ProjectDetail({ lang, projectSlug, onBack }) {
               <span className="status-glow-dot"></span>
               <span className="status-badge-text">{project.statusText}</span>
             </div>
-            <div className="hero-links-wrap">
-              {project.liveLink && (
-                <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="hero-btn-link">
-                  {lang === 'en' ? 'visit live site ↗' : 'ver sitio en vivo ↗'}
-                </a>
-              )}
-              {project.repoLink && (
-                <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="hero-btn-link">
-                  {lang === 'en' ? 'github repo ↗' : 'repositorio github ↗'}
-                </a>
-              )}
-            </div>
+
           </div>
         </div>
 
