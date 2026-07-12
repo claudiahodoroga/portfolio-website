@@ -93,6 +93,7 @@ export default function ProjectDetail({ lang, projectSlug, onBack }) {
       statusText: lang === 'en' ? 'active project • review phase' : 'proyecto activo • fase de revisión',
       liveLink: 'https://github.com/claudiahodoroga/portfolio-website',
       repoLink: 'https://github.com/claudiahodoroga/portfolio-website',
+      prototypeLink: 'https://repot-mu.vercel.app/plantas',
       quote: null,
       metadata: {
         role: lang === 'en' ? 'Designer & Develope' : 'Diseñadora y Desarrolladora',
@@ -188,14 +189,14 @@ export default function ProjectDetail({ lang, projectSlug, onBack }) {
       theme: 'blueroom-theme',
       title: 'BLUE ROOM INNOVATION',
       heroTitle: lang === 'en' ? 'UX/UI & Frontend Internship — Summer 2025.' : 'Prácticas de UX/UI y Frontend — Verano de 2025.',
-      heroImg: '/photos/blueroom-hero.png',
-      statusText: lang === 'en' ? 'internship complete • live' : 'prácticas completadas • en vivo',
+      heroImg: '/bri/circularpassmockup.png',
+      statusText: lang === 'en' ? 'internship complete' : 'prácticas completadas',
       liveLink: 'https://blueroominnovation.com',
       repoLink: null,
       quote: {
         text: lang === 'en'
-          ? "Tot i tenir una base tècnica molt bona gràcies a la seva formació en informàtica, sempre m'ha impressionat molt de la Clàudia la seva passió pel disseny i la creativitat. És capaç de prendre decisions no només pensant en els aspectes tècnics, sinó també en els aspectes visuals i experiència d'usuari. Això aporta molt de valor als projectes, ja que és un perfil que trobo que sol faltar, i dóna frescor i enriqueix les discussions amb l'equip."
-          : "Tot i tenir una base tècnica molt bona gràcies a la seva formació en informàtica, sempre m'ha impressionat molt de la Clàudia la seva passió pel disseny i la creativitat. És capaç de prendre decisions no només pensant en els aspectes tècnics, sinó també en els aspectes visuals i experiència d'usuari. Això aporta molt de valor als projectes, ja que és un perfil que trobo que sol faltar, i dóna frescor i enriqueix les discussions amb l'equip.",
+          ? "Despite having a very good technical foundation thanks to her computer science training, I have always been very impressed by Claudia's passion for design and creativity. She is capable of making decisions thinking not only about technical aspects, but also visual and user experience aspects. This adds a lot of value to projects, as it is a profile that I find is often missing, bringing freshness and enriches discussions with the team."
+          : "A pesar de tener una base técnica muy buena gracias a su formación en informática, siempre me ha impresionado mucho de Claudia su pasión por el diseño y la creatividad. Es capaz de tomar decisiones pensando no solo en los aspectos técnicos, sino también en los aspectos visuales y de experiencia de usuario. Esto aporta mucho valor a los proyectos, ya que es un perfil que suelo encontrar que falta, aportando frescura y enriqueciendo las discusiones con el equipo.",
         author: lang === 'en' ? 'Guillem, Frontend Developer at Blue Room Innovation' : 'Guillem, Desarrollador Frontend en Blue Room Innovation'
       },
       metadata: {
@@ -265,10 +266,10 @@ export default function ProjectDetail({ lang, projectSlug, onBack }) {
             "Aprender a redactar un briefing y reunir requisitos a mitad de un proyecto es vital cuando trabajas sin instrucciones iniciales."
           ]
       },
-      mockupImages: ['/photos/blueroom-tablet.png'],
-      isolatedImage: '/photos/blueroom-drilldown.png',
-      outcomeImg: '/photos/blueroom-outcome.png',
-      isolatedCaption: lang === 'en' ? 'Drill-down interactive graph connection' : 'Interacción del gráfico de desglose'
+      mockupImages: ['/bri/portwaste_mockup.png'],
+      isolatedImage: null,
+      outcomeImg: '/bri/bri_interns.png',
+      isolatedCaption: null
     },
     hackupc: {
       theme: 'hackupc-theme',
@@ -278,6 +279,7 @@ export default function ProjectDetail({ lang, projectSlug, onBack }) {
       statusText: lang === 'en' ? 'active project • review phase' : 'proyecto activo • fase de revisión',
       liveLink: 'https://github.com/claudiahodoroga/portfolio-website',
       repoLink: 'https://github.com/claudiahodoroga/portfolio-website',
+      prototypeLink: 'https://split-the-bill-demo.vercel.app/',
       quote: null,
       metadata: {
         role: lang === 'en' ? 'Designer & Frontend' : 'Diseñadora y Frontend',
@@ -387,7 +389,13 @@ export default function ProjectDetail({ lang, projectSlug, onBack }) {
               <span className="status-glow-dot"></span>
               <span className="status-badge-text">{project.statusText}</span>
             </div>
-
+            {project.prototypeLink && (
+              <div className="hero-links-wrap">
+                <a href={project.prototypeLink} target="_blank" rel="noopener noreferrer" className="hero-btn-link">
+                  {lang === 'en' ? 'view live prototype ↗' : 'ver prototipo en vivo ↗'}
+                </a>
+              </div>
+            )}
           </div>
         </div>
 
@@ -503,7 +511,7 @@ export default function ProjectDetail({ lang, projectSlug, onBack }) {
         </div>
       </ScrollSlide>
 
-      {/* Slide 6: Takeaways — image (left), learnings list (right) */}
+      {/* Slide 6: Takeaways — image (left), learnings list (right) + optional quote row */}
       <ScrollSlide className="outcomes-slide">
         <div className="outcomes-layout-grid">
           <div className="outcome-mockup-card">
@@ -526,17 +534,17 @@ export default function ProjectDetail({ lang, projectSlug, onBack }) {
                 </li>
               ))}
             </ul>
-
-            {project.quote && (
-              <div className="quote-section-card" style={{ marginTop: '24px' }}>
-                <blockquote className="project-blockquote">
-                  <p className="quote-body-text">"{project.quote.text}"</p>
-                  <cite className="quote-author-label">— {project.quote.author}</cite>
-                </blockquote>
-              </div>
-            )}
           </div>
         </div>
+
+        {project.quote && (
+          <div className="outcomes-quote-row">
+            <blockquote className="quote-banner-blockquote">
+              <p className="quote-banner-text">"{project.quote.text}"</p>
+              <cite className="quote-banner-author">— {project.quote.author}</cite>
+            </blockquote>
+          </div>
+        )}
       </ScrollSlide>
     </div>
   );

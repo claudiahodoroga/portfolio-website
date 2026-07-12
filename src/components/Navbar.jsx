@@ -41,23 +41,6 @@ export default function Navbar({ lang, setLang, currentPage, setCurrentPage }) {
         </nav>
         
         <div className="nav-footer">
-          {/* Language Switcher */}
-          <div className="lang-toggle">
-            <button 
-              onClick={() => setLang('en')} 
-              className={`lang-btn ${lang === 'en' ? 'active' : ''}`}
-            >
-              english
-            </button>
-            <span className="lang-divider">/</span>
-            <button 
-              onClick={() => setLang('es')} 
-              className={`lang-btn ${lang === 'es' ? 'active' : ''}`}
-            >
-              español
-            </button>
-          </div>
-
           <div className="nav-socials">
             <a href="https://www.linkedin.com/in/claudiahodoroga/" target="_blank" rel="noopener noreferrer" className="lang-btn">
               linkedin

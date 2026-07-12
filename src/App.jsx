@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Work from './pages/Work';
 import About from './pages/About';
@@ -11,6 +11,14 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState('work');
   const [selectedProject, setSelectedProject] = useState(null);
   const [lang, setLang] = useState('en');
+
+  useEffect(() => {
+    document.body.classList.add('app-booting');
+    const timer = setTimeout(() => {
+      document.body.classList.remove('app-booting');
+    }, 2200);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);

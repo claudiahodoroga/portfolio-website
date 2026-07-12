@@ -19,7 +19,7 @@ export default function Work({ lang, onProjectSelect }) {
         ? ['frontend dev', 'ux/ui design', 'startup experience'] 
         : ['desarrollo frontend', 'diseño ux/ui', 'experiencia startup'],
       thumbnail: '/photos/blueroominnovation.png',
-      video: '/videos/blueroom.mp4'
+      video: '/bri/circularpass.mp4'
     },
     {
       slug: 'hackupc',

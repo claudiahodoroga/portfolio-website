@@ -17,7 +17,7 @@
 }
 
 /* Custom Cursor Resets for Desktop */
-@media (min-width: 1025px) {
+@media (min-width: 769px) {
   *, *::before, *::after {
     cursor: none !important;
   }
@@ -190,7 +190,7 @@ ul, ol {
 }
 
 /* Media Queries for Mobile Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .layout-container {
     flex-direction: column;
     padding: 16px;
@@ -225,7 +225,7 @@ ul, ol {
   display: block;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .fishtank {
     width: 100%;
     height: 53px;
@@ -238,7 +238,7 @@ ul, ol {
   image-rendering: auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .fishtank-item {
     --scale: 0.6;
   }
@@ -453,7 +453,7 @@ ul, ol {
   width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .project-grid {
     grid-template-columns: 1fr;
     gap: 8px; /* Mobile gap between elements */
@@ -479,22 +479,24 @@ ul, ol {
 }
 
 .project-tags {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   width: 100%;
+  justify-content: center;
 }
 
 .project-tag {
   background-color: var(--primary-color);
   color: #ffffff;
-  padding: 3px 4px;
+  padding: 3px 10px;
   border-radius: 9999px;
   font-size: 12px;
   font-weight: 500;
   text-transform: lowercase;
   letter-spacing: -0.02em;
   text-align: center;
+  white-space: nowrap;
 }
 
 .project-title {
@@ -527,6 +529,7 @@ ul, ol {
   top: 0;
   left: 0;
   opacity: 0;
+  object-fit: cover;
 }
 
 .hover-overlay {
@@ -551,6 +554,10 @@ ul, ol {
 
 .project-card:hover .thumbnail-video {
   opacity: 1;
+}
+
+.project-card:hover .thumbnail-img {
+  opacity: 0;
 }
 
 .project-card:hover .hover-overlay {
@@ -623,7 +630,7 @@ ul, ol {
 }
 
 /* Mobile Navbar Layout overrides */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .nav-container {
     height: auto;
     width: 100%;
@@ -767,7 +774,7 @@ ul, ol {
   gap: 4px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .about-row-1 {
     flex-direction: column-reverse; /* image at top, text below */
     gap: 16px;
@@ -795,7 +802,7 @@ ul, ol {
   width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .archive-container {
     gap: 8px; /* Mobile gap between elements */
   }
@@ -844,7 +851,7 @@ ul, ol {
   text-align: left;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .archive-row-media {
     flex-direction: column-reverse; /* image on top on mobile */
     gap: 12px;
@@ -869,14 +876,14 @@ ul, ol {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .project-tags {
     gap: 4px;
   }
 
   .project-tag {
     font-size: 10px;
-    padding: 3px 2px;
+    padding: 3px 8px;
   }
 }
 
@@ -913,7 +920,7 @@ ul, ol {
   font-size: 12px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .lang-toggle {
     margin-top: 0;
     width: auto;
@@ -936,7 +943,7 @@ ul, ol {
   transform: translate(-50%, -50%) scale(1.4) rotate(45deg);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .custom-cursor {
     display: none;
   }
@@ -964,7 +971,7 @@ ul, ol {
   gap: 4px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .about-row-1 {
     flex-direction: column-reverse; /* image at top, text below */
     gap: 16px;
@@ -992,7 +999,7 @@ ul, ol {
   width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .archive-container {
     gap: 8px; /* Mobile gap between elements */
   }
@@ -1041,7 +1048,7 @@ ul, ol {
   text-align: left;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .archive-row-media {
     flex-direction: column-reverse; /* image on top on mobile */
     gap: 12px;
@@ -1066,14 +1073,14 @@ ul, ol {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .project-tags {
     gap: 4px;
   }
 
   .project-tag {
     font-size: 10px;
-    padding: 3px 2px;
+    padding: 3px 8px;
   }
 }
 
@@ -1110,7 +1117,7 @@ ul, ol {
   font-size: 12px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .lang-toggle {
     margin-top: 0;
     width: auto;
@@ -1133,7 +1140,7 @@ ul, ol {
   transform: translate(-50%, -50%) scale(1.4) rotate(45deg);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .custom-cursor {
     display: none;
   }
@@ -1219,6 +1226,7 @@ ul, ol {
 
 .back-btn-link {
   font-size: var(--font-size-base);
+  font-family: inherit;
   font-weight: 500;
   color: var(--primary-color);
   text-decoration: none;
@@ -1248,6 +1256,7 @@ ul, ol {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.6s;
 }
 
 .project-slide.slide-visible {
@@ -1269,7 +1278,8 @@ ul, ol {
   grid-template-columns: 1.2fr 1.8fr;
   gap: 40px;
   align-items: center;
-  min-height: 400px;
+  min-height: auto;
+  padding: 0 40px !important;
 }
 
 .hero-text-wrap {
@@ -1301,13 +1311,19 @@ ul, ol {
 
 .hero-device-img {
   max-width: 100%;
+  max-height: 220px;
   height: auto;
+  width: auto;
   border-radius: 12px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
 .hackupc-theme .hero-device-img {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.blueroom-theme .hero-device-img {
+  box-shadow: none;
 }
 
 /* Overview Layout Split */
@@ -1640,16 +1656,30 @@ ul, ol {
 }
 
 /* Mobile Media Queries for Case Studies */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .project-slide {
     padding: 24px;
     min-height: auto;
   }
 
+  .outcomes-slide {
+    gap: 16px !important;
+  }
+
   .project-hero-slide {
     grid-template-columns: 1fr;
     gap: 24px;
-    text-align: left;
+    text-align: center;
+    align-items: center;
+    padding: 24px !important;
+  }
+
+  .hero-visual-card {
+    order: -1;
+  }
+
+  .hero-status-area {
+    align-items: center;
   }
 
   .hero-heading {
@@ -1662,6 +1692,19 @@ ul, ol {
   .outcomes-layout-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .slide-grid-half {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .metadata-list {
+    gap: 8px;
+  }
+
+  .metadata-list li {
+    padding-bottom: 8px;
   }
   
   .metadata-card {
@@ -2088,7 +2131,7 @@ ul, ol {
   transform: translateY(-2px);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .scroll-to-top {
     bottom: 20px;
     right: 50%;
@@ -2096,5 +2139,151 @@ ul, ol {
   }
   .scroll-to-top:hover {
     transform: translateX(50%) translateY(-2px);
+  }
+}
+
+/* Quote Banner Styles */
+.quote-banner-slide {
+  background-color: transparent !important;
+  color: rgba(47, 38, 167, 0.9) !important;
+  padding: 0 !important;
+  border-radius: var(--corner-radius);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: auto !important;
+}
+
+.gallery-slide {
+  padding: 0 !important;
+}
+
+.outcomes-slide {
+  gap: 44px !important;
+}
+
+.outcomes-quote-row {
+  width: 100%;
+}
+
+.quote-banner-blockquote {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-banner-text {
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  color: rgba(47, 38, 167, 0.9) !important;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.quote-banner-author {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: rgba(47, 38, 167, 0.9) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-style: normal;
+  display: block;
+}
+
+/* ============================================================
+   On-Load & Page Transition Stagger Animations
+   ============================================================ */
+
+@keyframes fadeSlideInLeft {
+  from { opacity: 0; transform: translateX(-14px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeSlideInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ------ Sidebar: slide in on first load only (app-booting) ------ */
+.app-booting .sidebar {
+  opacity: 0;
+  animation: fadeSlideInLeft 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+@media (max-width: 768px) {
+  .app-booting .sidebar {
+    animation-name: fadeSlideInDown;
+  }
+}
+
+/* ------ Main content: delayed on first load so sidebar appears first ------ */
+.app-booting .fade-in-page {
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+}
+
+/* ------ Work page: project cards stagger left-to-right, top-to-bottom ------ */
+.project-card {
+  opacity: 0;
+  animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Page transitions — quick stagger */
+.project-card:nth-child(1) { animation-delay: 0.10s; }
+.project-card:nth-child(2) { animation-delay: 0.22s; }
+.project-card:nth-child(3) { animation-delay: 0.34s; }
+.project-card:nth-child(4) { animation-delay: 0.46s; }
+
+/* Initial load — min 0.6s as requested */
+.app-booting .project-card:nth-child(1) { animation-delay: 0.60s; }
+.app-booting .project-card:nth-child(2) { animation-delay: 0.75s; }
+.app-booting .project-card:nth-child(3) { animation-delay: 0.90s; }
+.app-booting .project-card:nth-child(4) { animation-delay: 1.05s; }
+
+/* ------ About page: rows stagger ------ */
+.about-row-1 {
+  opacity: 0;
+  animation: fadeSlideUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.10s both;
+}
+.about-row-2 {
+  opacity: 0;
+  animation: fadeSlideUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+}
+
+.app-booting .about-row-1 { animation-delay: 0.60s; }
+.app-booting .about-row-2 { animation-delay: 0.80s; }
+
+/* ------ Archive page: rows stagger ------ */
+.archive-row {
+  opacity: 0;
+  animation: fadeSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.archive-row:nth-child(1) { animation-delay: 0.10s; }
+.archive-row:nth-child(2) { animation-delay: 0.24s; }
+.archive-row:nth-child(3) { animation-delay: 0.38s; }
+.archive-row:nth-child(4) { animation-delay: 0.52s; }
+
+.app-booting .archive-row:nth-child(1) { animation-delay: 0.60s; }
+.app-booting .archive-row:nth-child(2) { animation-delay: 0.76s; }
+.app-booting .archive-row:nth-child(3) { animation-delay: 0.92s; }
+.app-booting .archive-row:nth-child(4) { animation-delay: 1.08s; }
+
+/* ------ Respect reduced-motion preference ------ */
+@media (prefers-reduced-motion: reduce) {
+  .app-booting .sidebar,
+  .project-card,
+  .about-row-1,
+  .about-row-2,
+  .archive-row {
+    animation: none;
+    opacity: 1;
   }
 }
